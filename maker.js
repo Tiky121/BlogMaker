@@ -86,17 +86,17 @@ function slugifyTitle(title) {
     <header>
       <div class="container">
         <nav aria-label="Primárna navigácia">
-          <a class="brand" href="../index.html#top">
+          <a class="brand" href="../index.php#top">
             <img class="brand-mark" src="../Images/Logo.png" alt="Fyziodom logo" />
             <span>Fyziodom</span>
           </a>
           <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Menu">☰</button>
           <div id="primary-menu" class="nav-links" role="menu">
-            <a href="../index.html#sluzby" role="menuitem">Služby</a>
-            <a href="../index.html#cennik" role="menuitem">Cenník</a>
-            <a href="../index.html#hodiny" role="menuitem">Ordinačné hodiny</a>
-            <a href="../index.html#onas" role="menuitem">O nás</a>
-            <a href="../index.html#kontakt" role="menuitem">Kontakt</a>
+            <a href="../index.php#sluzby" role="menuitem">Služby</a>
+            <a href="../index.php#cennik" role="menuitem">Cenník</a>
+            <a href="../index.php#hodiny" role="menuitem">Ordinačné hodiny</a>
+            <a href="../index.php#onas" role="menuitem">O nás</a>
+            <a href="../index.php#kontakt" role="menuitem">Kontakt</a>
             <a href="../blog.php" role="menuitem">Blog</a>
             <a class="btn" href="javascript:void(0)" onclick="onClickOpen()" aria-label="Otvoriť rezerváciu" role="menuitem">Rezervovať termín</a>
           </div>
@@ -226,3 +226,4 @@ function slugifyTitle(title) {
   });
 
   
+
