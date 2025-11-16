@@ -97,7 +97,7 @@ function slugifyTitle(title) {
             <a href="../index.html#hodiny" role="menuitem">Ordinačné hodiny</a>
             <a href="../index.html#onas" role="menuitem">O nás</a>
             <a href="../index.html#kontakt" role="menuitem">Kontakt</a>
-            <a href="../blog.html" role="menuitem">Blog</a>
+            <a href="../blog.php" role="menuitem">Blog</a>
             <a class="btn" href="javascript:void(0)" onclick="onClickOpen()" aria-label="Otvoriť rezerváciu" role="menuitem">Rezervovať termín</a>
           </div>
         </nav>
@@ -224,4 +224,5 @@ function slugifyTitle(title) {
       URL.revokeObjectURL(url);
     });
   });
+
   
