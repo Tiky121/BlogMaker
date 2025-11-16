@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fyziodom – Blog maker</title>
+
+  <!-- môžeš použiť aj hlavný styles.css, aby to vyzeralo rovnako -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="maker.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primárna navigácia">
+        <a class="brand" href="index.html#top">
+          <img class="brand-mark" src="./Images/Logo.png" alt="Fyziodom logo" />
+          <span>Fyziodom – Blog maker</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <section class="maker-wrap" aria-label="Vytvorenie blogového článku">
+      <h1>Vytvoriť nový blogový článok</h1>
+      <p class="lead">
+        Vyplň nadpis, dátum, voliteľný obrázok a obsah. Po kliknutí na tlačidlo sa stiahne
+        hotový <code>.html</code> súbor, ktorý vložíš do priečinka <code>blog/</code>.
+      </p>
+
+      <div class="maker-grid">
+        <!-- FORMULÁR -->
+        <article class="card maker-card">
+          <h2>Formulár článku</h2>
+          <form id="post-form" class="maker-form">
+            <label for="title">Nadpis článku *</label>
+            <input type="text" id="title" required
+                   placeholder="Napr. Ako posilniť chrbát po pôrode" />
+          
+            <label for="date">Dátum (YYYY-MM-DD)</label>
+            <input type="date" id="date" />
+          
+            <!-- NOVÉ: nahratie obrázka z PC -->
+            <label for="imageFile">Obrázok (voliteľné)</label>
+            <input type="file" id="imageFile" accept="image/*" />
+          
+            <label for="imageAlt">Popis obrázka (alt text)</label>
+            <input type="text" id="imageAlt"
+                   placeholder="Stručný popis obrázka (kvôli prístupnosti)" />
+          
+            <label for="content">Obsah článku *</label>
+            <textarea id="content"
+              placeholder="Sem napíš text článku. Môžeš použiť prázdne riadky na odseky. Základné HTML tagy (napr. &lt;strong&gt;, &lt;a&gt;) nechávam tak."></textarea>
+          
+            <button type="submit" class="btn">Vygenerovať HTML a stiahnuť</button>
+          </form>
+          
+        </article>
+
+        <!-- PREVIEW HTML -->
+        <article class="card maker-card">
+          <h2>Náhľad HTML kódu</h2>
+          <p class="small muted">
+            Tento kód sa uloží do súboru. Môžeš si ho skontrolovať a prípadne upraviť.
+          </p>
+          <textarea id="html-preview" readonly class="code-preview"></textarea>
+          <p class="small muted">
+            Názov súboru sa generuje z nadpisu (diakritika sa odstráni, medzery sa nahradia
+            pomlčkami), napr. <code>ako-posilnit-chrbat-po-porode.html</code>.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-flex">
+      <p>© <span id="year"></span> Fyziodom. Interný nástroj na tvorbu blogu.</p>
+    </div>
+  </footer>
+
+  <script src="maker.js"></script>
+  <script>
+    // rok v pätičke
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

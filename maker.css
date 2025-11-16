@@ -1,0 +1,84 @@
+/* Jednoduché doplnkové štýly k existujúcemu styles.css,
+   aby maker vyzeral ako súčasť webu. */
+
+   .maker-wrap{
+    padding: 2.5rem 0 3rem;
+  }
+  
+  .maker-wrap h1{
+    margin-bottom: .4rem;
+  }
+  
+  .maker-grid{
+    display:grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap:1.2rem;
+    margin-top:1.5rem;
+  }
+  
+  .maker-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:1.2rem;
+    box-shadow:var(--shadow);
+  }
+  
+  .maker-card h2{
+    font-size:1.1rem;
+    margin:.1rem 0 .6rem;
+  }
+  
+  .maker-form label{
+    display:block;
+    font-weight:600;
+    margin:.6rem 0 .25rem;
+  }
+  
+  .maker-form input[type="text"],
+  .maker-form input[type="date"],
+  .maker-form textarea{
+    width:100%;
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:.65rem .8rem;
+    font:inherit;
+    background:#fff;
+  }
+  .maker-form input[type="file"]{
+    width:100%;
+    padding:.4rem 0;
+    font:inherit;
+  }
+  
+  
+  .maker-form textarea{
+    min-height:220px;
+    resize:vertical;
+  }
+  
+  .maker-form button{
+    margin-top:1rem;
+  }
+  
+  .code-preview{
+    width:100%;
+    min-height:260px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:.7rem .8rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size:.9rem;
+    background:#0b1120;
+    color:#e5e7eb;
+    resize:vertical;
+    white-space:pre;
+  }
+  
+  /* responsívne rozloženie */
+  @media (max-width: 900px){
+    .maker-grid{
+      grid-template-columns:1fr;
+    }
+  }
+  
